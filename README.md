@@ -1,157 +1,170 @@
 <div align="center">
+  <img src="assets/nxrskyaa-banner.svg" width="100%" alt="Nxrskyaa — Web3, AI Agents, dApp Builder" />
 
-<!-- Animated Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=200&section=header&text=Nxrskyaa&fontSize=60&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Web3%20%7C%20Crypto%20%7C%20Blockchain%20Developer&descAlignY=55&descSize=18"/>
+  <br />
 
-<!-- Typing Animation -->
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=667EEA&center=true&vCenter=true&width=600&lines=Building+the+decentralized+future+🚀;Smart+Contract+Developer+⛓️;DeFi+%7C+NFT+%7C+DAO+Enthusiast+💎;Code.+Deploy.+Disrupt.+🔥)](https://git.io/typing-svg)
+  <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=800&size=28&duration=2400&pause=700&color=39FF88&center=true&vCenter=true&width=900&lines=building+clean+web3+apps+with+arcade+energy;ai+agents+%2B+on-chain+automation;ritual+chain+explorer+%E2%80%A2+dapp+builder;less+hype%2C+more+shipping" alt="Typing intro" />
 
-<!-- Profile Views & Followers -->
-<img src="https://komarev.com/ghpvc/?username=Nxrskyaa&color=667eea&style=for-the-badge&label=Profile+Views" alt="Profile Views"/>
-<img src="https://img.shields.io/github/followers/Nxrskyaa?color=764ba2&style=for-the-badge&logo=github&label=Followers" alt="Followers"/>
+  <br />
 
+  <a href="https://github.com/nxrskyaa?tab=followers">
+    <img src="https://img.shields.io/github/followers/nxrskyaa?style=for-the-badge&label=Followers&labelColor=0B1020&color=39FF88&logo=github" alt="GitHub followers" />
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=nxrskyaa&style=for-the-badge&label=Profile+Views&color=00F5FF&labelColor=0B1020" alt="Profile views" />
+  <img src="https://img.shields.io/badge/status-shipping-39FF88?style=for-the-badge&labelColor=0B1020" alt="Status: shipping" />
 </div>
 
----
+<br />
 
-## 🦊 About Me
+<div align="center">
+  <code>web3</code> · <code>ritual chain</code> · <code>autonomous agents</code> · <code>next.js</code> · <code>wagmi</code> · <code>viem</code> · <code>ai x crypto</code>
+</div>
 
-```typescript
+<br />
+
+## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28" alt="wave" /> Yo, I’m Nxrskyaa
+
+```ts
 const nxrskyaa = {
-    role: "Web3 Developer & Crypto Enthusiast",
-    location: "🌍 Decentralized",
-    currentlyBuilding: "🔮 The next-gen dApp",
-    learning: ["Zero Knowledge Proofs", "MEV", "Account Abstraction"],
-    interests: ["DeFi", "NFTs", "DAOs", "Layer 2", "Cross-chain"],
-    philosophy: "Code is law. Trust is math. 🧮",
-    funFact: "I debug smart contracts at 3AM ⛽"
+  role: "Web3 + AI Agent Builder",
+  vibe: "clean UI, fast experiments, on-chain playgrounds",
+  currentlyCooking: ["Tennis Rally Arc", "Ritual Chain dApps", "autonomous agents"],
+  favoriteStack: ["Next.js", "TypeScript", "Tailwind", "wagmi", "viem"],
+  motto: "ship it, polish it, make it feel alive",
 };
 ```
 
----
+<br />
 
-## ⛓️ Blockchain & Web3 Stack
+## ⚡ Visual Stack
 
 <div align="center">
 
-### 🔗 Chains
-![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
-![Solana](https://img.shields.io/badge/Solana-9945FF?style=for-the-badge&logo=solana&logoColor=white)
-![Polygon](https://img.shields.io/badge/Polygon-8247E5?style=for-the-badge&logo=polygon&logoColor=white)
-![Arbitrum](https://img.shields.io/badge/Arbitrum-28A0F0?style=for-the-badge&logo=arbitrum&logoColor=white)
-![BNB Chain](https://img.shields.io/badge/BNB%20Chain-F3BA2F?style=for-the-badge&logo=binance&logoColor=black)
-
-### 💻 Languages
-![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-### 🛠️ Tools & Frameworks
-![Hardhat](https://img.shields.io/badge/Hardhat-FFF100?style=for-the-badge&logo=hardhat&logoColor=black)
-![Foundry](https://img.shields.io/badge/Foundry-000000?style=for-the-badge&logo=ethereum&logoColor=white)
-![Ethers.js](https://img.shields.io/badge/Ethers.js-2535A0?style=for-the-badge&logo=ethereum&logoColor=white)
-![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
-![IPFS](https://img.shields.io/badge/IPFS-65C2CB?style=for-the-badge&logo=ipfs&logoColor=white)
-![The Graph](https://img.shields.io/badge/The%20Graph-6747ED?style=for-the-badge&logo=thegraph&logoColor=white)
-
-### 🎨 Frontend
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Wagmi](https://img.shields.io/badge/Wagmi-000000?style=for-the-badge&logo=ethereum&logoColor=white)
-![RainbowKit](https://img.shields.io/badge/RainbowKit-000000?style=for-the-badge&logo=ethereum&logoColor=white)
+<table>
+<tr>
+<td align="center" width="33%">
+  <h3>🧠 AI / Agents</h3>
+  <img src="https://skillicons.dev/icons?i=py,ts,nodejs" alt="AI stack" /><br /><br />
+  <sub>autonomous flows, tooling, experiments</sub>
+</td>
+<td align="center" width="33%">
+  <h3>⛓️ Web3</h3>
+  <img src="https://skillicons.dev/icons?i=solidity,ethereum,ipfs" alt="Web3 stack" /><br /><br />
+  <sub>dApps, smart contracts, wallet UX</sub>
+</td>
+<td align="center" width="33%">
+  <h3>🎨 Frontend</h3>
+  <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,vercel" alt="Frontend stack" /><br /><br />
+  <sub>polished interfaces that don’t feel boring</sub>
+</td>
+</tr>
+</table>
 
 </div>
 
----
+<br />
 
-## 📊 GitHub Stats
+## 🚀 Featured Build
 
 <div align="center">
 
-<!-- GitHub Stats Card -->
-<img src="https://github-readme-stats.vercel.app/api?username=Nxrskyaa&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667eea&icon_color=764ba2&text_color=c9d1d9&count_private=true" alt="GitHub Stats" height="180"/>
+### 🎾 Tennis Rally Arc
 
-<!-- Top Languages -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxrskyaa&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=667eea&text_color=c9d1d9&langs_count=8" alt="Top Languages" height="180"/>
+**Arcade tennis rally game on Arc Testnet — playable without wallet, score submit with injected wallet.**
+
+<br />
+
+<a href="https://my-app-smoky-eight-25.vercel.app">
+  <img src="https://img.shields.io/badge/PLAY_TENNIS_RALLY_ARC-00F5FF?style=for-the-badge&labelColor=0B1020&logo=vercel&logoColor=white" alt="Play Tennis Rally Arc" />
+</a>
+<a href="https://github.com/nxrskyaa/tennis-rally-arc">
+  <img src="https://img.shields.io/badge/SOURCE_CODE-39FF88?style=for-the-badge&labelColor=0B1020&logo=github&logoColor=white" alt="Source code" />
+</a>
+
+<br />
+<br />
+
+`Next.js` · `Tailwind` · `wagmi` · `viem` · `Arc Testnet`
 
 </div>
 
+<br />
+
+## 📊 Build Pulse
+
+<div align="center">
+  <img src="assets/profile-cards.svg" width="92%" alt="Animated profile cards for Nxrskyaa" />
+</div>
+
+<br />
+
+## 🌊 Activity Mood
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=nxrskyaa&bg_color=0B1020&color=EAFBFF&line=39FF88&point=00F5FF&area=true&hide_border=true" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=nxrskyaa&bg_color=FFFFFF&color=0B1020&line=7C3AED&point=06B6D4&area=true&hide_border=true" alt="Nxrskyaa contribution graph" />
+  </picture>
+</div>
+
+<br />
+
+<div align="center">
+  <img src="assets/neon-wave.svg" width="86%" alt="Animated neon wave" />
+</div>
+
+<br />
+
+## 🧩 Current Quest Log
+
 <div align="center">
 
-<!-- Streak Stats -->
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Nxrskyaa&theme=tokyonight&hide_border=true&background=0D1117&stroke=667eea&ring=764ba2&fire=f093fb&currStreakLabel=667eea" alt="GitHub Streak"/>
+| Quest | Status |
+|---|---|
+| 🎾 Tennis Rally Arc dApp | `shipping` |
+| 🧠 Persistent / autonomous agent ideas | `researching` |
+| ⛓️ Ritual Chain experiments | `building` |
+| 🎨 Better Web3 UX patterns | `polishing` |
 
 </div>
 
+<br />
+
+## 🛠️ Tools I Like
+
 <div align="center">
 
-<!-- Contribution Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Nxrskyaa&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=667eea&line=764ba2&point=f093fb" alt="Contribution Graph"/>
+<img src="https://skillicons.dev/icons?i=ts,js,solidity,react,nextjs,tailwind,nodejs,python,git,github,vercel,vscode" alt="Tools" />
+
+<br />
+<br />
+
+<img src="https://img.shields.io/badge/wagmi-0B1020?style=for-the-badge&logo=ethereum&logoColor=39FF88" alt="wagmi" />
+<img src="https://img.shields.io/badge/viem-0B1020?style=for-the-badge&logo=ethereum&logoColor=00F5FF" alt="viem" />
+<img src="https://img.shields.io/badge/Ritual_Chain-0B1020?style=for-the-badge&logoColor=A855F7" alt="Ritual Chain" />
+<img src="https://img.shields.io/badge/Arc_Testnet-0B1020?style=for-the-badge&logoColor=39FF88" alt="Arc Testnet" />
 
 </div>
 
----
+<br />
 
-## 🏆 GitHub Trophies
+## 🌐 Connect
 
 <div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=Nxrskyaa&theme=tokyonight&no-frame=true&column=7&margin-w=10&margin-h=10" alt="GitHub Trophies"/>
-
+  <a href="https://t.me/Nxrskyaa">
+    <img src="https://img.shields.io/badge/Telegram-00F5FF?style=for-the-badge&labelColor=0B1020&logo=telegram&logoColor=white" alt="Telegram" />
+  </a>
+  <a href="https://x.com/Nxrskyaa">
+    <img src="https://img.shields.io/badge/X-FFFFFF?style=for-the-badge&labelColor=0B1020&logo=x&logoColor=white" alt="X" />
+  </a>
+  <a href="https://github.com/nxrskyaa">
+    <img src="https://img.shields.io/badge/GitHub-39FF88?style=for-the-badge&labelColor=0B1020&logo=github&logoColor=white" alt="GitHub" />
+  </a>
 </div>
 
----
-
-## 💎 Crypto Contributions
+<br />
 
 <div align="center">
-
-<!-- Snake Animation -->
-<img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake"/>
-
-</div>
-
----
-
-## 🔗 Connect With Me
-
-<div align="center">
-
-[![Twitter/X](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/Nxrskyaa)
-[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Nxrskyaa)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Nxrskyaa)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Nxrskyaa)
-
-</div>
-
----
-
-## 🎯 Current Focus
-
-<div align="center">
-
-```
-🔄 Building decentralized applications
-🧪 Experimenting with ZK-rollups
-📚 Learning Rust for Solana development
-🎨 Designing NFT collections
-🌉 Exploring cross-chain bridges
-```
-
-</div>
-
----
-
-<div align="center">
-
-<!-- Footer -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:f093fb,50:764ba2,100:667eea&height=120&section=footer"/>
-
-**⭐ Star my repos if you find them useful!**
-
-*"In code we trust, in decentralization we believe"* 🚀
-
+  <h3>“Make it useful. Make it fast. Make it feel alive.”</h3>
+  <sub>built with too much caffeine and just enough chaos ⚡</sub>
 </div>

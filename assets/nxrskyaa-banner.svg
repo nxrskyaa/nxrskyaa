@@ -1,0 +1,100 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nxrskyaa animated cyber banner</title>
+  <desc id="desc">Animated neon profile banner for Nxrskyaa, Web3 and autonomous agent builder.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050816"/>
+      <stop offset="0.38" stop-color="#111C44"/>
+      <stop offset="0.72" stop-color="#25104A"/>
+      <stop offset="1" stop-color="#041827"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="170" y1="70" x2="1020" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F5FF">
+        <animate attributeName="stop-color" values="#00F5FF;#A855F7;#39FF88;#00F5FF" dur="7s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#A855F7">
+        <animate attributeName="stop-color" values="#A855F7;#39FF88;#00F5FF;#A855F7" dur="7s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#39FF88">
+        <animate attributeName="stop-color" values="#39FF88;#00F5FF;#A855F7;#39FF88" dur="7s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#00F5FF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#00F5FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="#6EE7F9" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <style>
+      .title { font: 900 88px 'Segoe UI', Inter, system-ui, sans-serif; letter-spacing: 3px; }
+      .subtitle { font: 700 25px 'Segoe UI', Inter, system-ui, sans-serif; letter-spacing: 6px; }
+      .tag { font: 800 17px 'Segoe UI', Inter, system-ui, sans-serif; letter-spacing: 2px; }
+      .tiny { font: 700 14px 'Segoe UI', Inter, system-ui, sans-serif; letter-spacing: 1.5px; }
+      @keyframes float { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-16px); } }
+      @keyframes pulse { 0%,100% { opacity: .35; transform: scale(1); } 50% { opacity: .85; transform: scale(1.06); } }
+      @keyframes dash { to { stroke-dashoffset: -900; } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes scan { 0% { transform: translateX(-260px); opacity:0; } 15%,80% { opacity:.7; } 100% { transform: translateX(1260px); opacity:0; } }
+      @keyframes blink { 0%,45% { opacity:1; } 46%,100% { opacity:0; } }
+      .float { animation: float 5s ease-in-out infinite; transform-origin: center; }
+      .pulse { animation: pulse 3.8s ease-in-out infinite; transform-origin: center; }
+      .dash { stroke-dasharray: 16 18; animation: dash 18s linear infinite; }
+      .spin { animation: spin 18s linear infinite; transform-origin: 600px 210px; }
+      .scan { animation: scan 5.5s ease-in-out infinite; }
+      .cursor { animation: blink 1s step-end infinite; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" rx="34" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="34" fill="url(#grid)"/>
+  <circle class="pulse" cx="600" cy="210" r="240" fill="url(#glow)"/>
+  <path class="scan" d="M0 0H170L-40 420H-210L0 0Z" fill="white" opacity="0.18"/>
+
+  <g class="spin" opacity="0.85">
+    <ellipse cx="600" cy="210" rx="330" ry="94" stroke="url(#neon)" stroke-width="2.5" class="dash"/>
+    <ellipse cx="600" cy="210" rx="94" ry="330" stroke="url(#neon)" stroke-width="2.5" class="dash"/>
+  </g>
+
+  <g filter="url(#heavyGlow)">
+    <path d="M180 317C330 249 432 360 600 294C768 228 870 339 1020 271" stroke="url(#neon)" stroke-width="5" stroke-linecap="round" opacity="0.85" class="dash"/>
+  </g>
+
+  <g class="float" filter="url(#softGlow)">
+    <rect x="250" y="72" width="700" height="250" rx="32" fill="#08111F" fill-opacity="0.72" stroke="url(#neon)" stroke-width="2"/>
+    <text x="600" y="174" text-anchor="middle" class="title" fill="url(#neon)">Nxrskyaa</text>
+    <text x="600" y="219" text-anchor="middle" class="subtitle" fill="#EAFBFF">WEB3 • AI AGENTS • DAPP BUILDER</text>
+    <text x="600" y="260" text-anchor="middle" class="tiny" fill="#BDEFFF">building playful on-chain experiences with clean interfaces</text>
+    <text x="794" y="260" class="cursor" fill="#39FF88">▌</text>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <circle cx="164" cy="108" r="10" fill="#39FF88"/>
+    <circle cx="1034" cy="95" r="8" fill="#00F5FF"/>
+    <circle cx="1010" cy="320" r="12" fill="#A855F7"/>
+    <circle cx="202" cy="312" r="7" fill="#00F5FF"/>
+  </g>
+
+  <g>
+    <rect x="90" y="347" width="270" height="42" rx="21" fill="#00F5FF" fill-opacity="0.12" stroke="#00F5FF" stroke-opacity="0.35"/>
+    <text x="225" y="374" text-anchor="middle" class="tag" fill="#BDEFFF">RITUAL CHAIN</text>
+    <rect x="465" y="347" width="270" height="42" rx="21" fill="#A855F7" fill-opacity="0.12" stroke="#A855F7" stroke-opacity="0.35"/>
+    <text x="600" y="374" text-anchor="middle" class="tag" fill="#F4D7FF">AUTONOMOUS AGENTS</text>
+    <rect x="840" y="347" width="270" height="42" rx="21" fill="#39FF88" fill-opacity="0.12" stroke="#39FF88" stroke-opacity="0.35"/>
+    <text x="975" y="374" text-anchor="middle" class="tag" fill="#D7FFE8">TENNIS RALLY ARC</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg width="1000" height="300" viewBox="0 0 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nxrskyaa profile cards</title>
+  <desc id="desc">Animated local stats-style cards with no third-party failure points.</desc>
+  <defs>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1000" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F5FF"/>
+      <stop offset="0.5" stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#39FF88"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      text { font-family: 'Segoe UI', Inter, system-ui, sans-serif; }
+      .h { font-size: 26px; font-weight: 900; letter-spacing: 2px; fill: #EAFBFF; }
+      .n { font-size: 42px; font-weight: 900; fill: #39FF88; }
+      .s { font-size: 16px; font-weight: 700; fill: #9FB7D9; letter-spacing: 1px; }
+      @keyframes pulse { 0%,100% { opacity:.6; transform: scale(1); } 50% { opacity:1; transform: scale(1.04); } }
+      @keyframes dash { to { stroke-dashoffset: -600; } }
+      .pulse { animation: pulse 3s ease-in-out infinite; transform-origin:center; }
+      .dash { stroke-dasharray: 12 14; animation: dash 12s linear infinite; }
+    </style>
+  </defs>
+  <rect width="1000" height="300" rx="28" fill="#070B18"/>
+  <g filter="url(#glow)">
+    <rect x="35" y="42" width="285" height="216" rx="28" fill="#0B1020" stroke="url(#stroke)" stroke-width="2"/>
+    <rect x="357" y="42" width="285" height="216" rx="28" fill="#0B1020" stroke="url(#stroke)" stroke-width="2"/>
+    <rect x="680" y="42" width="285" height="216" rx="28" fill="#0B1020" stroke="url(#stroke)" stroke-width="2"/>
+  </g>
+  <path d="M70 220C110 150 150 245 195 170C235 105 275 185 305 120" stroke="#00F5FF" stroke-width="4" stroke-linecap="round" class="dash"/>
+  <path d="M392 220C435 120 480 220 525 135C570 55 600 150 625 92" stroke="#A855F7" stroke-width="4" stroke-linecap="round" class="dash"/>
+  <path d="M715 220C760 145 815 245 860 132C900 42 935 150 950 92" stroke="#39FF88" stroke-width="4" stroke-linecap="round" class="dash"/>
+  <text x="177" y="92" text-anchor="middle" class="h">FOCUS</text>
+  <text x="177" y="156" text-anchor="middle" class="n">WEB3</text>
+  <text x="177" y="194" text-anchor="middle" class="s">dApps • wallets • UX</text>
+  <text x="500" y="92" text-anchor="middle" class="h">QUEST</text>
+  <text x="500" y="156" text-anchor="middle" class="n">AGENTS</text>
+  <text x="500" y="194" text-anchor="middle" class="s">automation • memory • tools</text>
+  <text x="822" y="92" text-anchor="middle" class="h">MODE</text>
+  <text x="822" y="156" text-anchor="middle" class="n">SHIP</text>
+  <text x="822" y="194" text-anchor="middle" class="s">build • polish • deploy</text>
+  <circle cx="285" cy="82" r="9" fill="#00F5FF" class="pulse"/>
+  <circle cx="607" cy="82" r="9" fill="#A855F7" class="pulse"/>
+  <circle cx="930" cy="82" r="9" fill="#39FF88" class="pulse"/>
+</svg>
