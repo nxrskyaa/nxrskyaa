@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="t d">
+  <title id="t">nxrskyaa</title>
+  <desc id="d">Header card: nxrskyaa — browser games, onchain frontends, agent tools.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B0D10"/>
+      <stop offset="1" stop-color="#13171C"/>
+    </linearGradient>
+
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C7A76B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#C7A76B" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <radialGradient id="lift" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#C7A76B" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#C7A76B" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="bandFade" x1="300" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.82" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="bandMask">
+      <rect x="0" y="180" width="1200" height="60" fill="url(#bandFade)"/>
+    </mask>
+
+    <!-- greek-key meander, nods to the Odyvion art direction -->
+    <pattern id="meander" width="48" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 34 H48 M40 34 V6 H8 V26 H26 V16 H18"
+            fill="none" stroke="#E7DCC6" stroke-width="1.4" stroke-linecap="square"/>
+    </pattern>
+
+    <style><![CDATA[
+      .sans { font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
+      .mono { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace; }
+
+      @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+      @keyframes draw { from { stroke-dashoffset: 470; } }
+      @keyframes drift { to { transform: translateX(-48px); } }
+      @keyframes breathe { 50% { opacity: 0.45; } }
+
+      .r1 { animation: rise .7s cubic-bezier(.2,.7,.3,1) both; }
+      .r2 { animation: rise .7s cubic-bezier(.2,.7,.3,1) .08s both; }
+      .r3 { animation: rise .7s cubic-bezier(.2,.7,.3,1) .22s both; }
+      .r4 { animation: rise .7s cubic-bezier(.2,.7,.3,1) .34s both; }
+      .rule { animation: draw 1.5s cubic-bezier(.2,.7,.3,1) .18s both; }
+      .drift { animation: drift 26s linear infinite; }
+      .breathe { animation: breathe 18s ease-in-out infinite; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .r1, .r2, .r3, .r4, .rule, .drift, .breathe { animation: none; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="240" rx="14" fill="url(#bg)"/>
+  <rect width="1200" height="240" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <rect x="0" y="14" width="3" height="212" fill="url(#edge)"/>
+
+  <ellipse class="breathe" cx="1010" cy="80" rx="340" ry="190" fill="url(#lift)"/>
+
+  <g mask="url(#bandMask)" opacity="0.09">
+    <g class="drift">
+      <rect x="-48" y="180" width="1296" height="40" fill="url(#meander)"/>
+    </g>
+  </g>
+
+  <text class="mono r1" x="72" y="72" font-size="13" letter-spacing="2.6" fill="#6E7681">github.com/nxrskyaa</text>
+
+  <text class="sans r2" x="70" y="132" font-size="58" font-weight="600" letter-spacing="-1.4" fill="#F0F2F4">nxrskyaa</text>
+
+  <line class="rule" x1="72" y1="154" x2="542" y2="154"
+        stroke="#C7A76B" stroke-opacity="0.55" stroke-width="1"
+        stroke-dasharray="470" stroke-dashoffset="0"/>
+
+  <text class="mono r3" x="72" y="184" font-size="16" letter-spacing="0.2" fill="#98A1AB">browser games &#183; onchain frontends &#183; agent tools</text>
+
+  <g class="mono r4" font-size="12.5" letter-spacing="1.6" fill="#6E7681" text-anchor="end">
+    <text x="1128" y="76">three.js</text>
+    <text x="1128" y="102">canvas 2d</text>
+    <text x="1128" y="128">solidity</text>
+    <text x="1128" y="154">next.js</text>
+  </g>
+</svg>
