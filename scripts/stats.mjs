@@ -1,0 +1,182 @@
+// Regenerates assets/stats.svg from live GitHub data.
+//
+//   node scripts/stats.mjs                       # needs GITHUB_TOKEN, hits the GraphQL API
+//   STATS_JSON='{"projects":41,...}' node ...     # offline, renders from the given numbers
+//
+// Run by .github/workflows/stats.yml once a day. Delete both files to freeze the numbers.
+
+import { writeFile, mkdir } from "node:fs/promises";
+import { dirname } from "node:path";
+
+const USER = process.env.STATS_USER ?? "nxrskyaa";
+const OUT = "assets/stats.svg";
+
+// Chains I've shipped something onto. Bump this when a new one lands.
+const TESTNETS = 4; // Monad, Ritual, Arc, Rialo
+
+/* ---------------------------------------------------------------- data ---- */
+
+async function graphql(query, variables, token) {
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `bearer ${token}`,
+      "Content-Type": "application/json",
+      "User-Agent": `${USER}-profile-stats`,
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+  if (!res.ok) throw new Error(`GraphQL ${res.status} ${await res.text()}`);
+  const body = await res.json();
+  if (body.errors) throw new Error(JSON.stringify(body.errors));
+  return body.data;
+}
+
+async function collect() {
+  if (process.env.STATS_JSON) return JSON.parse(process.env.STATS_JSON);
+
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) throw new Error("GITHUB_TOKEN is required (or pass STATS_JSON)");
+
+  const head = await graphql(
+    `query ($login: String!) {
+       user(login: $login) {
+         createdAt
+         repositories(privacy: PUBLIC, isFork: false, ownerAffiliations: OWNER) { totalCount }
+       }
+     }`,
+    { login: USER },
+    token,
+  );
+
+  const projects = head.user.repositories.totalCount;
+  const firstYear = new Date(head.user.createdAt).getUTCFullYear();
+  const thisYear = new Date().getUTCFullYear();
+
+  // contributionsCollection spans at most one year, so walk year by year.
+  let contributions = 0;
+  for (let year = firstYear; year <= thisYear; year++) {
+    const data = await graphql(
+      `query ($login: String!, $from: DateTime!, $to: DateTime!) {
+         user(login: $login) {
+           contributionsCollection(from: $from, to: $to) {
+             contributionCalendar { totalContributions }
+           }
+         }
+       }`,
+      { login: USER, from: `${year}-01-01T00:00:00Z`, to: `${year}-12-31T23:59:59Z` },
+      token,
+    );
+    contributions += data.user.contributionsCollection.contributionCalendar.totalContributions;
+  }
+
+  return {
+    projects,
+    contributions,
+    testnets: TESTNETS,
+    updated: new Date().toISOString().slice(0, 10),
+  };
+}
+
+/* --------------------------------------------------------------- render ---- */
+
+// Values an odometer passes through on its way to `target`, eased so it slows
+// down as it arrives. Duplicates are collapsed, so small targets just count up.
+function rollSteps(target, frames = 12) {
+  const out = [];
+  for (let i = 0; i < frames; i++) {
+    const t = i / (frames - 1);
+    const eased = 1 - Math.pow(1 - t, 4);
+    const value = Math.round(target * eased);
+    if (out[out.length - 1] !== value) out.push(value);
+  }
+  if (out[0] !== 0) out.unshift(0);
+  if (out[out.length - 1] !== target) out.push(target);
+  return out;
+}
+
+const STACK = 60; // vertical gap between stacked odometer digits
+
+function cell(cx, index, value, label) {
+  const steps = rollSteps(value);
+  const digits = steps
+    .map(
+      (n, i) =>
+        `      <text x="${cx}" y="${76 + i * STACK}" class="num">${n.toLocaleString("en-US")}</text>`,
+    )
+    .join("\n");
+  const frames = steps.map((_, i) => `0 ${-i * STACK}`).join("; ");
+
+  return `    <g clip-path="url(#clip${index})">
+      <g>
+${digits}
+        <animateTransform attributeName="transform" type="translate"
+          values="${frames}" calcMode="discrete"
+          dur="${(steps.length * 0.1).toFixed(2)}s" repeatCount="1" fill="freeze"/>
+      </g>
+    </g>
+    <text x="${cx}" y="102" class="lbl">${label}</text>
+    <path d="M${cx - 70} 118 H${cx + 70}" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.2"/>
+    <path d="M${cx - 70} 118 H${cx + 70}" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.2"
+          stroke-dasharray="36 104">
+      <animate attributeName="stroke-dashoffset" values="140;0" dur="5s"
+        begin="${(index * 1.6).toFixed(1)}s" repeatCount="indefinite"/>
+    </path>`;
+}
+
+function render({ projects, contributions, testnets, updated }) {
+  const cells = [
+    cell(200, 0, projects, "PROJECTS BUILT"),
+    cell(600, 1, contributions, "CONTRIBUTIONS"),
+    cell(1000, 2, testnets, "TESTNETS SHIPPED ON"),
+  ].join("\n\n");
+
+  const clips = [200, 600, 1000]
+    .map(
+      (cx, i) =>
+        `    <clipPath id="clip${i}"><rect x="${cx - 160}" y="36" width="320" height="52"/></clipPath>`,
+    )
+    .join("\n");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="142" viewBox="0 0 1200 142" role="img" aria-label="${projects} projects built, ${contributions} contributions, ${testnets} testnets shipped on">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="142" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101620"/>
+      <stop offset="1" stop-color="#0A0E13"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="40" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBF7EE"/>
+      <stop offset="0.52" stop-color="#E0D6C0"/>
+      <stop offset="1" stop-color="#C7A76B"/>
+    </linearGradient>
+${clips}
+    <style><![CDATA[
+      .num { font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+             font-size: 46px; font-weight: 600; letter-spacing: -1px;
+             text-anchor: middle; fill: url(#metal); }
+      .lbl { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace;
+             font-size: 11.5px; letter-spacing: 2.2px; text-anchor: middle; fill: #79828C; }
+      .stamp { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace;
+               font-size: 9.5px; letter-spacing: 1px; text-anchor: end; fill: #4E565E; }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="142" rx="14" fill="url(#panel)"/>
+  <rect width="1200" height="142" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <path d="M400 34 V104 M800 34 V104" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
+
+  <g>
+${cells}
+  </g>
+
+  <text x="1176" y="132" class="stamp">updated ${updated}</text>
+</svg>
+`;
+}
+
+/* ----------------------------------------------------------------- main ---- */
+
+const stats = await collect();
+await mkdir(dirname(OUT), { recursive: true });
+await writeFile(OUT, render(stats), "utf8");
+console.log(`wrote ${OUT}`, stats);

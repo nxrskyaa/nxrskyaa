@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" role="img" aria-label="Tennis Rally Arc">
+  <g fill="none" stroke="#C7A76B" stroke-width="1.7" stroke-linecap="round">
+    <circle cx="22" cy="17" r="8.5"/>
+    <path d="M14.6 12.8 Q21 17 14.6 21.2"/>
+    <path d="M29.4 12.8 Q23 17 29.4 21.2"/>
+  </g>
+  <g fill="none" stroke="#8B949E" stroke-opacity="0.7" stroke-width="1.4" stroke-linecap="round">
+    <path d="M8 31 H36"/>
+    <path d="M12 31 V36 M18 31 V36 M24 31 V36 M30 31 V36"/>
+  </g>
+</svg>
