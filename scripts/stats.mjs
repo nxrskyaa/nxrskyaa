@@ -95,14 +95,16 @@ function rollSteps(target, frames = 12) {
   return out;
 }
 
-const STACK = 60; // vertical gap between stacked odometer digits
+// The profile README column is only ~830px wide, so everything here is sized
+// to survive being scaled down to ~69%.
+const STACK = 76; // vertical gap between stacked odometer digits
 
 function cell(cx, index, value, label) {
   const steps = rollSteps(value);
   const digits = steps
     .map(
       (n, i) =>
-        `      <text x="${cx}" y="${76 + i * STACK}" class="num">${n.toLocaleString("en-US")}</text>`,
+        `      <text x="${cx}" y="${90 + i * STACK}" class="num">${n.toLocaleString("en-US")}</text>`,
     )
     .join("\n");
   const frames = steps.map((_, i) => `0 ${-i * STACK}`).join("; ");
@@ -115,11 +117,11 @@ ${digits}
           dur="${(steps.length * 0.1).toFixed(2)}s" repeatCount="1" fill="freeze"/>
       </g>
     </g>
-    <text x="${cx}" y="102" class="lbl">${label}</text>
-    <path d="M${cx - 70} 118 H${cx + 70}" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M${cx - 70} 118 H${cx + 70}" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.2"
-          stroke-dasharray="36 104">
-      <animate attributeName="stroke-dashoffset" values="140;0" dur="5s"
+    <text x="${cx}" y="124" class="lbl">${label}</text>
+    <path d="M${cx - 84} 146 H${cx + 84}" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.4"/>
+    <path d="M${cx - 84} 146 H${cx + 84}" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.4"
+          stroke-dasharray="44 124">
+      <animate attributeName="stroke-dashoffset" values="168;0" dur="5s"
         begin="${(index * 1.6).toFixed(1)}s" repeatCount="indefinite"/>
     </path>`;
 }
@@ -134,17 +136,17 @@ function render({ projects, contributions, testnets, updated }) {
   const clips = [200, 600, 1000]
     .map(
       (cx, i) =>
-        `    <clipPath id="clip${i}"><rect x="${cx - 160}" y="36" width="320" height="52"/></clipPath>`,
+        `    <clipPath id="clip${i}"><rect x="${cx - 170}" y="42" width="340" height="66"/></clipPath>`,
     )
     .join("\n");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="142" viewBox="0 0 1200 142" role="img" aria-label="${projects} projects built, ${contributions} contributions, ${testnets} testnets shipped on">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="${projects} projects built, ${contributions} contributions, ${testnets} testnets shipped on">
   <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="142" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="170" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#101620"/>
       <stop offset="1" stop-color="#0A0E13"/>
     </linearGradient>
-    <linearGradient id="metal" x1="0" y1="40" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+    <linearGradient id="metal" x1="0" y1="48" x2="0" y2="104" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#FBF7EE"/>
       <stop offset="0.52" stop-color="#E0D6C0"/>
       <stop offset="1" stop-color="#C7A76B"/>
@@ -152,24 +154,24 @@ function render({ projects, contributions, testnets, updated }) {
 ${clips}
     <style><![CDATA[
       .num { font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
-             font-size: 46px; font-weight: 600; letter-spacing: -1px;
+             font-size: 58px; font-weight: 600; letter-spacing: -1.2px;
              text-anchor: middle; fill: url(#metal); }
       .lbl { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace;
-             font-size: 11.5px; letter-spacing: 2.2px; text-anchor: middle; fill: #79828C; }
+             font-size: 15px; letter-spacing: 2.6px; text-anchor: middle; fill: #79828C; }
       .stamp { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace;
-               font-size: 9.5px; letter-spacing: 1px; text-anchor: end; fill: #4E565E; }
+               font-size: 12px; letter-spacing: 1px; text-anchor: end; fill: #4E565E; }
     ]]></style>
   </defs>
 
-  <rect width="1200" height="142" rx="14" fill="url(#panel)"/>
-  <rect width="1200" height="142" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
-  <path d="M400 34 V104 M800 34 V104" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
+  <rect width="1200" height="170" rx="14" fill="url(#panel)"/>
+  <rect width="1200" height="170" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <path d="M400 40 V130 M800 40 V130" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
 
   <g>
 ${cells}
   </g>
 
-  <text x="1176" y="132" class="stamp">updated ${updated}</text>
+  <text x="1170" y="161" class="stamp">updated ${updated}</text>
 </svg>
 `;
 }

@@ -1,102 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="142" viewBox="0 0 1200 142" role="img" aria-label="41 projects built, 304 contributions, 4 testnets shipped on">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="41 projects built, 304 contributions, 4 testnets shipped on">
   <defs>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="142" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="170" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#101620"/>
       <stop offset="1" stop-color="#0A0E13"/>
     </linearGradient>
-    <linearGradient id="metal" x1="0" y1="40" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+    <linearGradient id="metal" x1="0" y1="48" x2="0" y2="104" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#FBF7EE"/>
       <stop offset="0.52" stop-color="#E0D6C0"/>
       <stop offset="1" stop-color="#C7A76B"/>
     </linearGradient>
-    <clipPath id="clip0"><rect x="40" y="36" width="320" height="52"/></clipPath>
-    <clipPath id="clip1"><rect x="440" y="36" width="320" height="52"/></clipPath>
-    <clipPath id="clip2"><rect x="840" y="36" width="320" height="52"/></clipPath>
+    <clipPath id="clip0"><rect x="30" y="42" width="340" height="66"/></clipPath>
+    <clipPath id="clip1"><rect x="430" y="42" width="340" height="66"/></clipPath>
+    <clipPath id="clip2"><rect x="830" y="42" width="340" height="66"/></clipPath>
     <style><![CDATA[
       .num { font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
-             font-size: 46px; font-weight: 600; letter-spacing: -1px;
+             font-size: 58px; font-weight: 600; letter-spacing: -1.2px;
              text-anchor: middle; fill: url(#metal); }
       .lbl { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace;
-             font-size: 11.5px; letter-spacing: 2.2px; text-anchor: middle; fill: #79828C; }
+             font-size: 15px; letter-spacing: 2.6px; text-anchor: middle; fill: #79828C; }
       .stamp { font-family: ui-monospace, "SF Mono", "Cascadia Mono", "Segoe UI Mono", Menlo, monospace;
-               font-size: 9.5px; letter-spacing: 1px; text-anchor: end; fill: #4E565E; }
+               font-size: 12px; letter-spacing: 1px; text-anchor: end; fill: #4E565E; }
     ]]></style>
   </defs>
 
-  <rect width="1200" height="142" rx="14" fill="url(#panel)"/>
-  <rect width="1200" height="142" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
-  <path d="M400 34 V104 M800 34 V104" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
+  <rect width="1200" height="170" rx="14" fill="url(#panel)"/>
+  <rect width="1200" height="170" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <path d="M400 40 V130 M800 40 V130" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1"/>
 
   <g>
     <g clip-path="url(#clip0)">
       <g>
-      <text x="200" y="76" class="num">0</text>
-      <text x="200" y="136" class="num">13</text>
-      <text x="200" y="196" class="num">23</text>
-      <text x="200" y="256" class="num">30</text>
-      <text x="200" y="316" class="num">34</text>
-      <text x="200" y="376" class="num">37</text>
-      <text x="200" y="436" class="num">39</text>
-      <text x="200" y="496" class="num">40</text>
-      <text x="200" y="556" class="num">41</text>
+      <text x="200" y="90" class="num">0</text>
+      <text x="200" y="166" class="num">13</text>
+      <text x="200" y="242" class="num">23</text>
+      <text x="200" y="318" class="num">30</text>
+      <text x="200" y="394" class="num">34</text>
+      <text x="200" y="470" class="num">37</text>
+      <text x="200" y="546" class="num">39</text>
+      <text x="200" y="622" class="num">40</text>
+      <text x="200" y="698" class="num">41</text>
         <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -60; 0 -120; 0 -180; 0 -240; 0 -300; 0 -360; 0 -420; 0 -480" calcMode="discrete"
+          values="0 0; 0 -76; 0 -152; 0 -228; 0 -304; 0 -380; 0 -456; 0 -532; 0 -608" calcMode="discrete"
           dur="0.90s" repeatCount="1" fill="freeze"/>
       </g>
     </g>
-    <text x="200" y="102" class="lbl">PROJECTS BUILT</text>
-    <path d="M130 118 H270" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M130 118 H270" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.2"
-          stroke-dasharray="36 104">
-      <animate attributeName="stroke-dashoffset" values="140;0" dur="5s"
+    <text x="200" y="124" class="lbl">PROJECTS BUILT</text>
+    <path d="M116 146 H284" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.4"/>
+    <path d="M116 146 H284" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.4"
+          stroke-dasharray="44 124">
+      <animate attributeName="stroke-dashoffset" values="168;0" dur="5s"
         begin="0.0s" repeatCount="indefinite"/>
     </path>
 
     <g clip-path="url(#clip1)">
       <g>
-      <text x="600" y="76" class="num">0</text>
-      <text x="600" y="136" class="num">96</text>
-      <text x="600" y="196" class="num">168</text>
-      <text x="600" y="256" class="num">219</text>
-      <text x="600" y="316" class="num">254</text>
-      <text x="600" y="376" class="num">277</text>
-      <text x="600" y="436" class="num">291</text>
-      <text x="600" y="496" class="num">299</text>
-      <text x="600" y="556" class="num">302</text>
-      <text x="600" y="616" class="num">304</text>
+      <text x="600" y="90" class="num">0</text>
+      <text x="600" y="166" class="num">96</text>
+      <text x="600" y="242" class="num">168</text>
+      <text x="600" y="318" class="num">219</text>
+      <text x="600" y="394" class="num">254</text>
+      <text x="600" y="470" class="num">277</text>
+      <text x="600" y="546" class="num">291</text>
+      <text x="600" y="622" class="num">299</text>
+      <text x="600" y="698" class="num">302</text>
+      <text x="600" y="774" class="num">304</text>
         <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -60; 0 -120; 0 -180; 0 -240; 0 -300; 0 -360; 0 -420; 0 -480; 0 -540" calcMode="discrete"
+          values="0 0; 0 -76; 0 -152; 0 -228; 0 -304; 0 -380; 0 -456; 0 -532; 0 -608; 0 -684" calcMode="discrete"
           dur="1.00s" repeatCount="1" fill="freeze"/>
       </g>
     </g>
-    <text x="600" y="102" class="lbl">CONTRIBUTIONS</text>
-    <path d="M530 118 H670" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M530 118 H670" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.2"
-          stroke-dasharray="36 104">
-      <animate attributeName="stroke-dashoffset" values="140;0" dur="5s"
+    <text x="600" y="124" class="lbl">CONTRIBUTIONS</text>
+    <path d="M516 146 H684" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.4"/>
+    <path d="M516 146 H684" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.4"
+          stroke-dasharray="44 124">
+      <animate attributeName="stroke-dashoffset" values="168;0" dur="5s"
         begin="1.6s" repeatCount="indefinite"/>
     </path>
 
     <g clip-path="url(#clip2)">
       <g>
-      <text x="1000" y="76" class="num">0</text>
-      <text x="1000" y="136" class="num">1</text>
-      <text x="1000" y="196" class="num">2</text>
-      <text x="1000" y="256" class="num">3</text>
-      <text x="1000" y="316" class="num">4</text>
+      <text x="1000" y="90" class="num">0</text>
+      <text x="1000" y="166" class="num">1</text>
+      <text x="1000" y="242" class="num">2</text>
+      <text x="1000" y="318" class="num">3</text>
+      <text x="1000" y="394" class="num">4</text>
         <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -60; 0 -120; 0 -180; 0 -240" calcMode="discrete"
+          values="0 0; 0 -76; 0 -152; 0 -228; 0 -304" calcMode="discrete"
           dur="0.50s" repeatCount="1" fill="freeze"/>
       </g>
     </g>
-    <text x="1000" y="102" class="lbl">TESTNETS SHIPPED ON</text>
-    <path d="M930 118 H1070" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.2"/>
-    <path d="M930 118 H1070" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.2"
-          stroke-dasharray="36 104">
-      <animate attributeName="stroke-dashoffset" values="140;0" dur="5s"
+    <text x="1000" y="124" class="lbl">TESTNETS SHIPPED ON</text>
+    <path d="M916 146 H1084" stroke="#C7A76B" stroke-opacity="0.16" stroke-width="1.4"/>
+    <path d="M916 146 H1084" stroke="#E8D3A2" stroke-opacity="0.8" stroke-width="1.4"
+          stroke-dasharray="44 124">
+      <animate attributeName="stroke-dashoffset" values="168;0" dur="5s"
         begin="3.2s" repeatCount="indefinite"/>
     </path>
   </g>
 
-  <text x="1176" y="132" class="stamp">updated 2026-07-26</text>
+  <text x="1170" y="161" class="stamp">updated 2026-07-26</text>
 </svg>

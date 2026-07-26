@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="26" viewBox="0 0 1200 26" role="presentation">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="34" viewBox="0 0 1200 34" role="presentation">
   <defs>
-    <pattern id="meander" width="48" height="26" patternUnits="userSpaceOnUse">
-      <path d="M0 21 H48 M40 21 V5 H8 V15 H26 V10 H18"
-            fill="none" stroke="#C7A76B" stroke-width="1.4" stroke-linecap="square"/>
+    <pattern id="meander" width="60" height="34" patternUnits="userSpaceOnUse">
+      <path d="M0 27 H60 M50 27 V6 H10 V19 H33 V12 H23"
+            fill="none" stroke="#C7A76B" stroke-width="1.8" stroke-linecap="square"/>
     </pattern>
     <linearGradient id="fade" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0"    stop-color="#fff" stop-opacity="0"/>
@@ -10,14 +10,14 @@
       <stop offset="0.84" stop-color="#fff" stop-opacity="1"/>
       <stop offset="1"    stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <mask id="m"><rect width="1200" height="26" fill="url(#fade)"/></mask>
+    <mask id="m"><rect width="1200" height="34" fill="url(#fade)"/></mask>
   </defs>
 
-  <g mask="url(#m)" opacity="0.5">
+  <g mask="url(#m)" opacity="0.55">
     <g>
-      <rect x="-48" width="1296" height="26" fill="url(#meander)"/>
+      <rect x="-60" width="1320" height="34" fill="url(#meander)"/>
       <animateTransform attributeName="transform" type="translate"
-        values="0 0; -48 0" dur="14s" repeatCount="indefinite"/>
+        values="0 0; -60 0" dur="14s" repeatCount="indefinite"/>
     </g>
   </g>
 </svg>
