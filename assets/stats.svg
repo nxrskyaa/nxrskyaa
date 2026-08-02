@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="44 projects built, 370 contributions, 4 testnets shipped on">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="46 projects built, 407 contributions, 4 testnets shipped on">
   <defs>
     <linearGradient id="panel" x1="0" y1="0" x2="0" y2="170" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#101620"/>
@@ -31,14 +31,14 @@
     <g clip-path="url(#clip0)">
       <g>
       <text x="200" y="90" class="num">0</text>
-      <text x="200" y="166" class="num">14</text>
-      <text x="200" y="242" class="num">24</text>
-      <text x="200" y="318" class="num">32</text>
-      <text x="200" y="394" class="num">37</text>
-      <text x="200" y="470" class="num">40</text>
-      <text x="200" y="546" class="num">42</text>
-      <text x="200" y="622" class="num">43</text>
-      <text x="200" y="698" class="num">44</text>
+      <text x="200" y="166" class="num">15</text>
+      <text x="200" y="242" class="num">25</text>
+      <text x="200" y="318" class="num">33</text>
+      <text x="200" y="394" class="num">38</text>
+      <text x="200" y="470" class="num">42</text>
+      <text x="200" y="546" class="num">44</text>
+      <text x="200" y="622" class="num">45</text>
+      <text x="200" y="698" class="num">46</text>
         <animateTransform attributeName="transform" type="translate"
           values="0 0; 0 -76; 0 -152; 0 -228; 0 -304; 0 -380; 0 -456; 0 -532; 0 -608" calcMode="discrete"
           dur="0.90s" repeatCount="1" fill="freeze"/>
@@ -55,15 +55,15 @@
     <g clip-path="url(#clip1)">
       <g>
       <text x="600" y="90" class="num">0</text>
-      <text x="600" y="166" class="num">117</text>
-      <text x="600" y="242" class="num">204</text>
-      <text x="600" y="318" class="num">266</text>
-      <text x="600" y="394" class="num">309</text>
-      <text x="600" y="470" class="num">337</text>
-      <text x="600" y="546" class="num">354</text>
-      <text x="600" y="622" class="num">364</text>
-      <text x="600" y="698" class="num">368</text>
-      <text x="600" y="774" class="num">370</text>
+      <text x="600" y="166" class="num">129</text>
+      <text x="600" y="242" class="num">225</text>
+      <text x="600" y="318" class="num">293</text>
+      <text x="600" y="394" class="num">340</text>
+      <text x="600" y="470" class="num">371</text>
+      <text x="600" y="546" class="num">390</text>
+      <text x="600" y="622" class="num">400</text>
+      <text x="600" y="698" class="num">405</text>
+      <text x="600" y="774" class="num">407</text>
         <animateTransform attributeName="transform" type="translate"
           values="0 0; 0 -76; 0 -152; 0 -228; 0 -304; 0 -380; 0 -456; 0 -532; 0 -608; 0 -684" calcMode="discrete"
           dur="1.00s" repeatCount="1" fill="freeze"/>
@@ -98,5 +98,5 @@
     </path>
   </g>
 
-  <text x="1170" y="161" class="stamp">updated 2026-08-01</text>
+  <text x="1170" y="161" class="stamp">updated 2026-08-02</text>
 </svg>
