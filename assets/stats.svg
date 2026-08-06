@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="48 projects built, 423 contributions, 4 testnets shipped on">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="48 projects built, 429 contributions, 4 testnets shipped on">
   <defs>
     <linearGradient id="panel" x1="0" y1="0" x2="0" y2="170" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#101620"/>
@@ -55,15 +55,15 @@
     <g clip-path="url(#clip1)">
       <g>
       <text x="600" y="90" class="num">0</text>
-      <text x="600" y="166" class="num">134</text>
-      <text x="600" y="242" class="num">233</text>
-      <text x="600" y="318" class="num">305</text>
-      <text x="600" y="394" class="num">354</text>
-      <text x="600" y="470" class="num">386</text>
-      <text x="600" y="546" class="num">405</text>
-      <text x="600" y="622" class="num">416</text>
-      <text x="600" y="698" class="num">421</text>
-      <text x="600" y="774" class="num">423</text>
+      <text x="600" y="166" class="num">136</text>
+      <text x="600" y="242" class="num">237</text>
+      <text x="600" y="318" class="num">309</text>
+      <text x="600" y="394" class="num">359</text>
+      <text x="600" y="470" class="num">391</text>
+      <text x="600" y="546" class="num">411</text>
+      <text x="600" y="622" class="num">421</text>
+      <text x="600" y="698" class="num">427</text>
+      <text x="600" y="774" class="num">429</text>
         <animateTransform attributeName="transform" type="translate"
           values="0 0; 0 -76; 0 -152; 0 -228; 0 -304; 0 -380; 0 -456; 0 -532; 0 -608; 0 -684" calcMode="discrete"
           dur="1.00s" repeatCount="1" fill="freeze"/>
@@ -98,5 +98,5 @@
     </path>
   </g>
 
-  <text x="1170" y="161" class="stamp">updated 2026-08-05</text>
+  <text x="1170" y="161" class="stamp">updated 2026-08-06</text>
 </svg>
